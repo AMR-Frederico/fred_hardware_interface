@@ -1,0 +1,6 @@
+<launch>
+
+    <node name="feedback_node" pkg="fred_hardware_interface" type="feedback_node.py" output="screen" />
+
+
+</launch>
