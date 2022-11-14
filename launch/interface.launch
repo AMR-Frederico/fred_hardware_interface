@@ -1,7 +1,7 @@
 <launch>
 
     <!-- Hardware interface node-->
-    <node name="fred_interface_node" pkg="fred_hardware_interface" type="fred_interface_node" />
+    <!-- <node name="fred_interface_node" pkg="fred_hardware_interface" type="fred_interface_node" /> -->
 
     <!-- Load controller config -->
     <arg name="launch_controllers" default="true"/>

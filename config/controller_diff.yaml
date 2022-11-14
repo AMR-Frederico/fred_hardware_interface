@@ -32,7 +32,7 @@ diff_controller:
 
     # Base frame_id
     base_frame_id: robot_base_footprint #default: base_link
-    enable_odom_tf: false #true: encoders | false: needs ekf to publish
+    enable_odom_tf: true #true: encoders | false: needs ekf to publish
     
     # Velocity and acceleration limits
     # Whenever a min_* is unspecified, default to -max_*
