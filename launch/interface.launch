@@ -1,12 +1,11 @@
 <launch>
 
     <!-- Hardware interface node-->
-    <!-- <node name="fred_interface_node" pkg="fred_hardware_interface" type="fred_interface_node" /> -->
+    <node name="fred_hardware_interface_double_node" pkg="fred_hardware_interface" type="fred_hardware_interface_double_node" />
 
     <!-- Load controller config -->
     <arg name="launch_controllers" default="true"/>
     <rosparam command="load" file="$(find fred_hardware_interface)/config/controller_diff.yaml"/>
-
 
     <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" ns="/" args="diff_controller"/>
 

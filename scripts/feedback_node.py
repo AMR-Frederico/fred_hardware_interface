@@ -58,12 +58,12 @@ if __name__ == '__main__':
     pub_left_vel = rospy.Publisher(
         "/feedback/left_velocity", Float64, queue_size=1)
 
-    rospy.Subscriber("/rightDrive/status/vel", Float64, callback_right)
-    rospy.Subscriber("/leftDrive/status/vel", Float64, callback_left)
+    rospy.Subscriber("power/status/pwm/right", Float64, callback_right)
+    rospy.Subscriber("power/status/pwm/left", Float64, callback_left)
 
-    rospy.Subscriber("/rightDrive/status/position",
+    rospy.Subscriber("power/status/speed/angular/right",
                      Float64, callback_right_angle)
-    rospy.Subscriber("/leftDrive/status/position",
+    rospy.Subscriber("power/status/speed/angular/left",
                      Float64, callback_left_angle)
 
     rospy.spin()
